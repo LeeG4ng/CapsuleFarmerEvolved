@@ -33,6 +33,7 @@ class Config:
                         #Orig data
                         "username": accs[account]["username"],
                         "password": accs[account]["password"],
+                        "email": accs[account].get("email", ""),
                         
                         #IMAP data
                         "imapUsername": accs[account].get("imapUsername", ""),

@@ -12,6 +12,8 @@ pyyaml = "*"
 rich = "*"
 pyjwt = "*"
 imaplib2 = "*"
+yagmail = "*"
+schedule = "*"
 
 [dev-packages]
 autopep8 = "*"

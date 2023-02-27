@@ -13,6 +13,7 @@ from pathlib import Path
 from time import sleep, strftime, localtime
 from Restarter import Restarter
 from SharedData import SharedData
+from Notify import Notify
 
 from Stats import Stats
 from VersionManager import VersionManager
@@ -56,6 +57,9 @@ def main(log: logging.Logger, config: Config):
         stats.initNewAccount(account)
 
     restarter = Restarter(stats)
+
+    notify = Notify(log, config, stats)
+    notify.start()
 
     log.info(f"Starting a GUI thread.")
     guiThread = GuiThread(log, config, stats, locks)
